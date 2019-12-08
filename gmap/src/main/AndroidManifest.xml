@@ -30,7 +30,7 @@
         <!-- 高德地图SDK的Key -->
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="f6f5dc4aa9638cf42761095cbd5ede7f" />
+            android:value="16f79e3a48c2809084865209fa320fcd" />
 
         <service android:name="com.amap.api.location.APSService" />
 

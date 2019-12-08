@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/color_bg"
     android:orientation="vertical"
-    tools:context="com.weimu.chewu.module.login.ForgetPwdTip3Activity">
+    tools:context=".module.register.RegisterTips3Activity">
     <include
         layout="@layout/toolbar_primary"/>
     <TextView

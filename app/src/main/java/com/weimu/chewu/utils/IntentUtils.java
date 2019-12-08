@@ -289,7 +289,7 @@ public class IntentUtils {
         }
         Uri uri;
         if (Build.VERSION.SDK_INT >= 24) {
-            uri = FileProvider.getUriForFile(context.getApplicationContext(), Const.FilePreoviderAuthorities, file);
+            uri = FileProvider.getUriForFile(context.getApplicationContext(), "com.weimu.chewu.fileprovider", file);
         } else {
             uri = Uri.fromFile(file);
         }

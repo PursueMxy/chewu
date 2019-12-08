@@ -39,16 +39,16 @@ android {
         }
     }
 
-    //签名
-    signingConfigs {
-        config {
-            storeFile file('../chewu.jks')
-            keyAlias 'chewu'
-            keyPassword '20180101zz'
-            storePassword '20180101zz'
-        }
-
-    }
+//    //签名
+//    signingConfigs {
+//        config {
+//            storeFile file('../chewu.jks')
+//            keyAlias 'chewu'
+//            keyPassword '20180101zz'
+//            storePassword '20180101zz'
+//        }
+//
+//    }
     //检查
     lintOptions {
         abortOnError false
@@ -56,7 +56,7 @@ android {
 
     buildTypes {
         debug {
-            signingConfig signingConfigs.config
+//            signingConfig signingConfigs.config
             applicationIdSuffix ""
             buildConfigField 'String', 'HOST', '"http://hlcw.kuaishanghd.com/api/"'
 

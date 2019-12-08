@@ -91,7 +91,6 @@ public class MainPresenterImpl implements MainContract.MainPresenter {
     public void orderReceiving(final Marker marker, final OrderInMapB orderInMapB) {
         if (!combineDisposable.isDisposable("orderReceiving"))
             mCase.orderReceiving(orderInMapB.getId());
-//            Log.e("orderReceiving","orderReceiving");
             mCase.orderReceiving(orderInMapB.getId()).subscribe(new OnRequestObserver<BaseB>() {
                 @Override
                 protected void onStart(Disposable d) {
@@ -121,7 +120,7 @@ public class MainPresenterImpl implements MainContract.MainPresenter {
             mCase.confirmOrder(order_id).subscribe(new OnRequestObserver<BaseB>() {
                 @Override
                 protected void onStart(Disposable d) {
-//                    combineDisposable.addDisposable("confirmOrder", d);
+                    combineDisposable.addDisposable("confirmOrder", d);
                 }
 
                 @Override

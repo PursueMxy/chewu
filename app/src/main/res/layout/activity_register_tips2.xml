@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.weimu.chewu.module.register.RegisterTips1Activity">
+    tools:context=".module.register.RegisterTips1Activity">
     <include
         layout="@layout/toolbar_primary"/>
     <TextView

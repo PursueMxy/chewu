@@ -159,7 +159,7 @@ public class RegisterTips4Activity extends BaseActivity {
      * 检查权限并跳转到拍照页面
      */
     private void checkPermissonToCamera() {
-        rxPermissions.request(android.Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.CAMERA)
+        rxPermissions.request(android.Manifest.permission.CAMERA,android.Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 .subscribe(new Consumer<Boolean>() {
                     @Override
                     public void accept(Boolean aBoolean) throws Exception {
