@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical"
+    tools:context="com.weimu.chewu.module.login.ForgetPwdTip3Activity">
+    <include
+        layout="@layout/toolbar_primary"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_888"
+        android:textSize="20sp"
+        android:text="请设置您的账户密码"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="@dimen/margin_left_right"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_888"
+        android:layout_marginRight="30dp"
+        android:textSize="16sp"
+        android:text="为了保证您的账户安全，请设置6-22位的账号密码"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/margin_left_right"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/margin_left_right"
+        android:layout_marginRight="@dimen/margin_left_right"
+        android:layout_marginTop="45dp"
+        android:background="@drawable/edit_normal_shape">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/login_pwd" />
+
+        <EditText
+            android:id="@+id/register_et_password"
+            android:inputType="number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="26dp"
+            android:background="@color/colorTransparent"
+            android:gravity="center_vertical"
+            android:hint="密码"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/register_btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="26dp"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:text="完成"
+        android:layout_marginLeft="@dimen/margin_left_right"
+        android:layout_marginRight="@dimen/margin_left_right"
+        android:background="@drawable/btn_default_shape"/>
+</LinearLayout>

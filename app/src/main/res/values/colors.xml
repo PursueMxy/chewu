@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--调用的统一颜色-->
+    <color name="colorPrimary">#2B292A</color>
+    <color name="colorPrimaryDark">#2B292A</color>
+    <color name="colorAccent">#4E77BA</color>
+    <color name="colorBackground">#F2F2F2</color>
+    <color name="colorTransparent">#00000000</color>
+
+
+    <!--底部button字体颜色-->
+    <color name="main_bottom_tab_title_default">#84929B</color>
+    <color name="main_bottom_tab_title_selected">#F85255</color>
+
+
+    <!--items case award bg-->
+    <color name="items_bg">#2E374A</color>
+
+    <!--login-->
+    <color name="login_et_hint">#6E798B</color>
+    <color name="login_et_text">#9EA4AE</color>
+
+    <!--dialog-->
+    <color name="dialog_btn_primary">#8AACE4</color>
+
+    <!--me-->
+    <color name="me_btn_log_out">#7B89A3</color>
+
+    <!--recharge-->
+    <color name="recharge_babyBlue">#A7B6D4</color>
+    <color name="recharge_et_hint">#7E889D</color>
+    <color name="recharge_et_bg">#2E374A</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="color_shape_stroke">#b5b5b5</color>
+    <color name="color_bg">#f5f5f5</color>
+    <color name="color_888">#888888</color>
+
+    <!--wallet-->
+    <color name="wallet_bg_black">#1e1e1e</color>
+    <color name="wallet_bank_bg_black">#313131</color>
+    <color name="wallet_text_black">#424242</color>
+
+    <color name="color_divider">#dedede</color>
+    <color name="color_helf_transparent_white">#50ffffff</color>
+
+    <color name="colorBlackPrimary">#424242</color>
+    <color name="color_ddd">#dddddd</color>
+    <color name="color_red">#e60012</color>
+    <color name="color_yellow">#ffa42c</color>
+    <color name="color_blue">#0189ea</color>
+
+</resources>
+
+

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical"
+    tools:context="com.weimu.chewu.module.login.ForgetPwdTip2Activity">
+
+    <include layout="@layout/toolbar_primary"></include>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left_right"
+        android:layout_marginTop="50dp"
+        android:text="请输入6位验证码"
+        android:textColor="@color/color_888"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/modify_phone_tv_notify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_left_right"
+        android:layout_marginTop="10dp"
+        android:text="已向xxxxxxxxxxx发送一个验证码"
+        android:textColor="@color/color_888"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/margin_left_right"
+        android:layout_marginRight="@dimen/margin_left_right"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/edit_normal_shape">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/forget_yzm" />
+
+        <EditText
+            android:id="@+id/modify_phone_et_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="26dp"
+            android:background="@color/colorTransparent"
+            android:gravity="center_vertical"
+            android:hint="@string/forget_pwd_id_code"
+            android:inputType="number"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/modify_phone_btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/margin_left_right"
+        android:layout_marginRight="@dimen/margin_left_right"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/btn_default_shape"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</LinearLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.weimu.chewu.module.wallet.bank.WithdrawCashActivity">
+
+    <include layout="@layout/toolbar_primary"></include>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_bg" />
+
+    <RelativeLayout
+        android:id="@+id/main_rl_bank_choose"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_left_right" />
+
+        <TextView
+            android:id="@+id/withdraw_cash_tv_bank_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="13dp"
+            android:text=""
+            android:textColor="@color/wallet_text_black"
+            android:textSize="19sp" />
+
+        <TextView
+            android:id="@+id/withdraw_cash_tv_weihao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/withdraw_cash_tv_bank_name"
+            android:layout_marginLeft="70dp"
+            android:text=""
+            android:textColor="@color/color_888"
+            android:textSize="19sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_left_right"
+            android:src="@drawable/you" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_bg" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/withdraw_cash_tv_bank_name"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="24dp"
+        android:text="提现金额"
+        android:textColor="@color/color_888"
+        android:textSize="19sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="14dp"
+            android:text="¥"
+            android:textColor="@color/wallet_text_black"
+            android:textSize="33sp" />
+
+        <EditText
+            android:id="@+id/withdraw_cash_et_money"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="23dp"
+            android:background="@color/colorTransparent"
+            android:inputType="number"
+            android:textColor="@color/wallet_text_black"
+            android:textSize="33sp" />
+    </LinearLayout>
+
+    <include
+        layout="@layout/divider_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="50dp"></include>
+
+    <TextView
+        android:id="@+id/withdraw_cash_tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="26dp"
+        android:text="可提现金额"
+        android:textColor="@color/color_ddd"
+        android:textSize="19sp" />
+
+    <Button
+        android:id="@+id/withdraw_cash_btn_input"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/margin_left_right"
+        android:layout_marginRight="@dimen/margin_left_right"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/btn_default_shape"
+        android:text="立即提现"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</LinearLayout>

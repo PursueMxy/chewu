@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.weimu.chewu.module.user.UserHeadActivity">
+
+    <include layout="@layout/toolbar_primary" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/userhead_iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        />
+        <View
+            android:background="@color/color_helf_transparent_white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userhead_civ_head"
+        android:layout_width="216dp"
+        android:layout_height="216dp"
+        android:layout_marginTop="126dp"
+        android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg"
+    android:orientation="vertical"
+    tools:context="com.weimu.chewu.module.loginx.LoginActivity">
+
+    <include layout="@layout/toolbar_primary" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/margin_left_right"
+        android:layout_marginRight="@dimen/margin_left_right"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/edit_normal_shape">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/login_phone" />
+
+        <EditText
+            android:id="@+id/login_et_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="26dp"
+            android:text=""
+            android:background="@color/colorTransparent"
+            android:gravity="center_vertical"
+            android:hint="@string/login_phone_hint"
+            android:inputType="number"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/margin_left_right"
+        android:layout_marginRight="@dimen/margin_left_right"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/edit_normal_shape"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/login_pwd" />
+
+        <EditText
+            android:id="@+id/login_et_pwd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="26dp"
+            android:layout_weight="1"
+            android:background="@color/colorTransparent"
+            android:gravity="center_vertical"
+            android:hint="@string/login_pwd_hint"
+            android:text=""
+            android:inputType="textPassword"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:id="@+id/login_rl_pwd_see"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/login_iv_pwd_see"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/login_pwd_no_see" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/login_tv_forget"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_left_right"
+            android:gravity="center_vertical"
+            android:text="@string/login_forget_pwd"
+            android:textColor="@color/color_888"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/login_btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/margin_left_right"
+        android:layout_marginRight="@dimen/margin_left_right"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/btn_default_shape"
+        android:text="@string/login_login"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</LinearLayout>

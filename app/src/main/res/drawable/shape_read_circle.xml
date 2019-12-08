@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 圆形边框 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval"
+    android:useLevel="true">
+
+    <size
+        android:width="8dp"
+        android:height="8dp" />
+
+    <stroke
+        android:color="@color/color_red" />
+    <gradient
+        android:startColor="@color/color_red"
+        android:endColor="@color/color_red"></gradient>
+
+</shape>

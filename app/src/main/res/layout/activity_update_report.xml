@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".module.update_report.UpdateReportActivity">
+
+    <include layout="@layout/toolbar_primary" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/corner_radius_0dp"
+        android:layout_weight="1">
+
+        <!--section 1-->
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_image_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="14dp">
+
+            <TextView
+                android:id="@+id/tv_image_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.司机站在车前方车牌与车合影"
+                android:textColor="#424242"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_image_1_pick"
+                android:layout_width="135dp"
+                android:layout_height="94dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="18dp"
+                android:visibility="gone"
+                android:background="@drawable/order_detail_camera_bg"
+                android:scaleType="centerInside"
+                android:src="@drawable/order_detail_camera"
+                app:layout_constraintTop_toBottomOf="@+id/tv_image_1" />
+
+
+            <ImageView
+                android:id="@+id/iv_image_1_example"
+                android:layout_width="135dp"
+                android:layout_height="94dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="18dp"
+                android:scaleType="centerInside"
+                android:src="@color/black_alpha10"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/iv_image_1_pick"
+                app:layout_constraintTop_toBottomOf="@+id/tv_image_1" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recy_images"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/iv_image_1_pick" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#2B292A"
+        android:gravity="center"
+        android:text="确认上传"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</LinearLayout>

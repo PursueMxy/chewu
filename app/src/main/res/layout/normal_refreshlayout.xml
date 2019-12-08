@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/normal_refresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:srlDisableContentWhenRefresh="true"
+    app:srlEnableHeaderTranslationContent="false"
+    app:srlEnableAutoLoadMore="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/normal_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

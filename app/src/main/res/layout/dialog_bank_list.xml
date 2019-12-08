@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <include
+        layout="@layout/divider_line"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="中国银行"
+        android:textColor="@color/wallet_text_black"
+        android:textSize="20sp"
+        android:gravity="center"/>
+    <include
+        layout="@layout/divider_line"/>
+</LinearLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="75dp"
+    android:background="@color/white"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal">
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/item_rtv_state"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="14dp"
+        android:gravity="center"
+        android:text="收"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:background="@color/white"
+        app:rv_backgroundColor="@color/color_yellow"
+        app:rv_isRadiusHalfHeight="true" />
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/item_rtv_state_1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="14dp"
+        android:gravity="center"
+        android:text="现"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:background="@color/white"
+        app:rv_backgroundColor="@color/color_blue"
+        app:rv_isRadiusHalfHeight="true" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="1110000"
+            android:textColor="@color/color_888"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_tv_remain_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="1110000"
+            android:textColor="@color/wallet_text_black"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/item_tv_remain_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:text="1110000"
+            android:textColor="@color/wallet_text_black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/color_yellow"
+        android:text="+10000"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"/>
+</LinearLayout>

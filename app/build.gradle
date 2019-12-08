@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "com.weimu.chewu"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        buildConfigField 'String', 'APPNAME', '"chewu"'
+        buildConfigField 'String', 'APPNAME_CN', '"华林车务"'
+        buildConfigField 'String', 'VERSION_BUG', '"1.0.1"'
+        multiDexEnabled true
+
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            //abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+            abiFilters 'armeabi'
+        }
+
+
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "4fb0bdf715406f5c280725c0", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            //说明so的路径为该libs路径，关联所有地图SDK的so文件
+        }
+    }
+
+    //签名
+    signingConfigs {
+        config {
+            storeFile file('../chewu.jks')
+            keyAlias 'chewu'
+            keyPassword '20180101zz'
+            storePassword '20180101zz'
+        }
+
+    }
+    //检查
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.config
+            applicationIdSuffix ""
+            buildConfigField 'String', 'HOST', '"http://hlcw.kuaishanghd.com/api/"'
+
+        }
+        release {
+            buildConfigField 'String', 'HOST', '"http://hlcw.kuaishanghd.com/api/"'
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //vlayout
+    implementation('com.alibaba.android:vlayout:1.2.8@aar') {
+        transitive = true
+    }
+    implementation project(':universalib')
+    //implementation project(':map')
+    implementation project(':gmap')
+    implementation project(':stickyheader')
+    //image compress
+    implementation 'top.zibin:Luban:1.1.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation files('libs/zxing.jar')
+    implementation 'cn.jiguang.sdk:jpush:3.1.1'
+    // 此处以JPush 3.1.1 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:1.1.9'
+    // 此处以JCore 1.1.9 版本为例。
+    //图库
+    implementation('www.weimu.io:imagepicker:0.2.7@aar') { transitive = true }
+    implementation files('libs/com.baidu.tts_2.3.2.20180713_6101c2a.jar')
+    //友盟通用包
+    implementation 'com.umeng.sdk:common:1.5.3'
+    //友盟分析
+    implementation 'com.umeng.sdk:analytics:7.5.0'
+    //七牛
+    implementation 'com.qiniu:qiniu-android-sdk:7.3.13'
+    //富文本
+    implementation 'com.zzhoujay.richtext:richtext:2.0.13'
+    //刷新控件
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-5'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-5'//没有使用特殊Header，可以不加这行
+    //roundView
+    implementation 'com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar'
+}
+
+

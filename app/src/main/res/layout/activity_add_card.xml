@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context="com.weimu.chewu.module.wallet.AddCardActivity">
+
+    <include layout="@layout/toolbar_primary" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/color_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:gravity="center_vertical"
+            android:text="持卡人"
+            android:textColor="@color/wallet_text_black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/add_card_et_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorTransparent"
+            android:hint="请输入持卡人姓名"
+            android:textColor="@color/wallet_text_black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <include layout="@layout/divider_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:gravity="center_vertical"
+            android:text="卡号"
+            android:textColor="@color/wallet_text_black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/add_card_et_num"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorTransparent"
+            android:hint="银行卡号"
+            android:textColor="@color/wallet_text_black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <include layout="@layout/divider_line" />
+
+    <LinearLayout
+        android:id="@+id/add_card_ll_open_account"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:gravity="center_vertical"
+            android:text="开户行"
+            android:textColor="@color/wallet_text_black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/add_card_et_card_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorTransparent"
+            android:gravity="center_vertical"
+            android:hint="请输入开户行"
+            android:textColor="@color/wallet_text_black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <include layout="@layout/divider_line" />
+
+    <Button
+        android:id="@+id/add_card_btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="85dp"
+        android:background="@drawable/btn_default_shape"
+        android:gravity="center"
+        android:text="保存"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+</LinearLayout>

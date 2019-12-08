@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.weimu.chewu.module.message.MessageCenterActivity">
+
+    <include layout="@layout/toolbar_primary"></include>
+
+    <com.weimu.chewu.widget.MultiStateView
+        android:id="@+id/mMultiStateView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:msv_emptyView="@layout/empty_message"
+        app:msv_errorView="@layout/content_list_state_error"
+        app:msv_viewState="content">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/mRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--列表-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clipToPadding="false"
+                android:overScrollMode="never" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </com.weimu.chewu.widget.MultiStateView>
+</LinearLayout>

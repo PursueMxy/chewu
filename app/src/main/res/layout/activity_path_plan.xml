@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".module.navi.PathPlanActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="153dp"
+        android:background="@color/white"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_arrow_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/base_arrow_back_black" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/cl_locations"
+            android:layout_width="0dp"
+            android:layout_height="83dp"
+            android:layout_marginRight="20dp"
+            android:background="#E5E5E5"
+            app:layout_constraintLeft_toRightOf="@+id/iv_arrow_back"
+            app:layout_constraintRight_toRightOf="parent">
+
+
+            <View
+                android:id="@+id/circle_start_green"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/path_plan_bg_circle_green"
+                app:layout_constraintBottom_toTopOf="@+id/circle_start_grey"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread_inside" />
+
+            <View
+                android:id="@+id/circle_start_grey"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:background="@drawable/path_plan_bg_circle_grey"
+                app:layout_constraintBottom_toTopOf="@+id/circle_end_grey"
+                app:layout_constraintLeft_toLeftOf="@+id/circle_start_green"
+                app:layout_constraintRight_toRightOf="@+id/circle_start_green"
+                app:layout_constraintTop_toBottomOf="@+id/circle_start_green" />
+
+
+            <View
+                android:id="@+id/circle_end_grey"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:background="@drawable/path_plan_bg_circle_grey"
+                app:layout_constraintBottom_toTopOf="@+id/circle_end_red"
+                app:layout_constraintLeft_toLeftOf="@+id/circle_start_green"
+                app:layout_constraintRight_toRightOf="@+id/circle_start_green"
+                app:layout_constraintTop_toBottomOf="@+id/circle_start_grey" />
+
+            <View
+                android:id="@+id/circle_end_red"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/path_plan_bg_circle_red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="@+id/circle_start_green"
+                app:layout_constraintRight_toRightOf="@+id/circle_start_green"
+                app:layout_constraintTop_toBottomOf="@+id/circle_end_grey" />
+
+
+            <TextView
+                android:id="@+id/tv_from"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="59dp"
+                android:layout_marginRight="16dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:text="from"
+                android:textColor="#424242"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_to"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_weight="1" />
+
+
+            <TextView
+                android:id="@+id/tv_to"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="59dp"
+                android:layout_marginRight="16dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:text="to"
+                android:textColor="#424242"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_from"
+                app:layout_constraintVertical_weight="1" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginRight="16dp"
+                android:background="#DCDCDC"
+                app:layout_constraintLeft_toLeftOf="@+id/tv_from"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_from" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <com.flyco.tablayout.CommonTabLayout
+            android:id="@+id/tab_navi_type"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_locations"
+            app:tl_iconVisible="false"
+            app:tl_indicator_color="#FBA248"
+            app:tl_indicator_style="BLOCK"
+            app:tl_textSelectColor="@color/white"
+            app:tl_textUnselectColor="#888888"
+            app:tl_textsize="16sp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_navi"
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:background="@color/white">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_path_plan"
+            android:layout_width="match_parent"
+            android:layout_height="102dp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#D2D2D2"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerview_path_plan" />
+
+        <TextView
+            android:id="@+id/tv_path_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="路线详情"
+            android:textColor="#424242"
+            android:textSize="18sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+
+        <TextView
+            android:id="@+id/btn_navi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/path_plan_bg_navi"
+            android:paddingBottom="9dp"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp"
+            android:paddingTop="9dp"
+            android:text="开始导航"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_bus"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>
